@@ -28,7 +28,7 @@ func main() {
 	Init()
 
 	model.Shortener = bitly
-	app.Gateway = nexmo
+	model.Gateway = nexmo
 
 	lambda.Start(app.RequestHandler)
 }
