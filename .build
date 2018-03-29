@@ -1,0 +1,4 @@
+GOOS=linux go build -o main && \
+rm -rf main.zip && \
+zip main.zip main && \
+rm -rf main
