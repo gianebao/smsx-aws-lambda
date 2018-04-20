@@ -4,10 +4,10 @@ import (
 	"os"
 
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/darylnwk/sms"
-	"github.com/darylnwk/smsx-aws-lambda/app"
-	"github.com/darylnwk/smsx-aws-lambda/app/model"
 	"github.com/gianebao/shorten"
+	"github.com/gianebao/sms"
+	"github.com/gianebao/smsx-aws-lambda/app"
+	"github.com/gianebao/smsx-aws-lambda/app/model"
 )
 
 var (

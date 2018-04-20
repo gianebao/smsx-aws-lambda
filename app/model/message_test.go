@@ -7,9 +7,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/darylnwk/sms"
-	"github.com/darylnwk/smsx-aws-lambda/app/model"
 	"github.com/gianebao/shorten"
+	"github.com/gianebao/sms"
+	"github.com/gianebao/smsx-aws-lambda/app/model"
 	"github.com/stretchr/testify/assert"
 )
 

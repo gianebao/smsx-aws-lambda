@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	"github.com/aws/aws-lambda-go/events"
-	"github.com/darylnwk/sms"
-	"github.com/darylnwk/smsx-aws-lambda/app/model"
+	"github.com/gianebao/sms"
+	"github.com/gianebao/smsx-aws-lambda/app/model"
 )
 
 // RequestHandler handles the API gateway request

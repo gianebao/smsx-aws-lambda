@@ -3,8 +3,8 @@ package model
 import (
 	"encoding/json"
 
-	"github.com/darylnwk/sms"
 	"github.com/gianebao/shorten"
+	"github.com/gianebao/sms"
 )
 
 // Message represents the message payload
