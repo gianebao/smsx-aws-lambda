@@ -9,8 +9,9 @@ import (
 
 // Message represents the message payload
 type Message struct {
-	To      string
-	Message sms.Message
+	To       string
+	Message  sms.Message
+	Callback string
 }
 
 var (
@@ -48,6 +49,10 @@ func (m *Message) UnmarshalJSON(b []byte) error {
 		m.To = datm["to"].(string)
 	}
 
+	if _, ok := datm["callback"]; ok {
+		m.Callback = datm["callback"].(string)
+	}
+
 	if _, ok := datm["text"]; ok {
 		m.Message.Template = datm["text"].(string)
 	}
@@ -71,7 +76,7 @@ func (m *Message) UnmarshalJSON(b []byte) error {
 // Send sends the Message as an SMS
 func (m Message) Send() (sms.NexmoResponse, error) {
 	var (
-		smsMsg, err = sms.Send(Gateway, m.To, m.Message)
+		smsMsg, err = sms.Send(Gateway, m.To, m.Message, m.Callback)
 	)
 
 	if err != nil {
